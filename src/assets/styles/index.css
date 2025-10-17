@@ -1,0 +1,2057 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff; /* Default white background */
+  color: #000000; /* Default black text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.7s ease, color 0.7s ease; /* From example.html body class */
+  overflow-x: hidden;
+  line-height: 1.5; /* Sensible default line height */
+  margin: 0 auto;
+}
+
+main.site-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  /*border: 1px solid black;*/
+  border-top: none;
+  border-bottom: none;
+  /* overflow-y-scroll; /* example.html has this, but usually default browser behavior */
+}
+
+/* Utility classes to be added as needed, mimicking Tailwind */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Add more styles below as we build sections */
+
+/* Background shapes (placeholder) */
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Behind all content */
+  overflow: hidden; /* Prevent shapes from causing scroll */
+}
+
+.shape1 {
+  position: absolute;
+  bottom: auto; /* equivalent to example.html: bottom-auto */
+  left: auto; /* equivalent to example.html: left-auto */
+  right: 0;
+  top: 0;
+  height: 500px;
+  width: 500px;
+  transform: translateX(-85vw) translateY(170vh); /* Matches example.html transform */
+  border-radius: 50%; /* rounded-full */
+  background-color: rgba(
+    251,
+    191,
+    36,
+    0.36
+  ); /* amber-500/60 (opacity adjusted) */
+  opacity: 0.5;
+  filter: blur(80px);
+}
+
+/* Navbar Styles */
+.main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.5rem; /* py-4 px-6 */
+  z-index: 100;
+  transition: transform 0.5s ease; /* transition-transform duration-500 */
+  /* background-color: rgba(255, 255, 255, 0.5); From example.html bg-white/50 - applied on children */
+  /* backdrop-filter: blur(10px); From example.html backdrop-blur-xl - applied on children */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px; /* Common max-width, adjust as needed */
+  margin: 0 auto;
+}
+
+.navbar-logo-link {
+  text-decoration: none;
+}
+
+.navbar-logo-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl (approx 12px) */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.375rem 1rem; /* px-4 py-1.5 */
+  transition: transform 0.5s ease; /* transition-transform duration-500 */
+  /* transform: translateX(0); /* translate-x-0 (default) */
+  border-radius: 0.375rem; /* rounded-md equivalent */
+}
+
+.logo-text {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+/* Desktop Navigation Links */
+.navbar-links-desktop {
+  display: none; /* Hidden by default, shown on md+ */
+  align-items: center;
+  gap: 2rem; /* space-x-8 */
+  position: absolute; /* For centering */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  transition: transform 0.5s ease; /* transition-transform duration-500 */
+  /* transform: translateY(0); /* translate-y-0 (default) */
+  border-radius: 0.375rem; /* rounded-md equivalent */
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #4b5563; /* text-gray-600 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #111827; /* text-gray-900 */
+}
+
+/* Desktop Contact Button */
+.navbar-contact-link-desktop {
+  display: none; /* Hidden by default, shown on md+ */
+  text-decoration: none;
+}
+
+.nav-button-contact {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  cursor: pointer;
+  transition: transform 0.5s ease; /* transition-transform duration-500 */
+  /* transform: translateX(0); /* translate-x-0 (default) */
+  color: #111827; /* Default text color for button */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+  border-radius: 0.375rem; /* rounded-md equivalent */
+}
+
+.nav-button-contact:hover {
+  /* Add hover effect if needed, e.g., background change */
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile Menu Button */
+.navbar-mobile-menu-button-wrapper {
+  display: flex; /* Default for mobile, hidden on md+ */
+  background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.5s ease;
+  border-radius: 0.375rem; /* rounded-md equivalent */
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem; /* p-2 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111827; /* Icon color */
+}
+
+.menu-icon {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+/* Mobile Menu Content Styles */
+.mobile-menu-content {
+  display: none; /* Hidden by default, shown by JS */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* Near opaque white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 200; /* Above navbar */
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobile-menu-content.active {
+  display: flex;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #111827;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mobile-nav-link {
+  font-size: 1.25rem; /* text-xl or similar for larger mobile links */
+  color: #111827;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-link.mobile-contact {
+  margin-top: 1rem;
+  background-color: #3b82f6; /* Example: bg-blue-500 */
+  color: white;
+}
+.mobile-nav-link.mobile-contact:hover {
+  background-color: #2563eb; /* Example: bg-blue-600 */
+}
+
+/* Responsive adjustments for Navbar (mimicking md: breakpoint) */
+@media (min-width: 768px) {
+  /* Tailwind's md breakpoint is 768px */
+  .navbar-links-desktop {
+    display: flex;
+  }
+  .navbar-contact-link-desktop {
+    display: inline-block; /* Or flex if it contains a flex item */
+  }
+  .navbar-mobile-menu-button-wrapper {
+    display: none;
+  }
+}
+
+/* Utility classes (if not already defined) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Add more styles below as we build sections */
+
+/* Hero Section Styles */
+.hero-section-marzipan {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* align content to bottom */
+  height: 100vh;
+  position: relative;
+  color: #000000; /* Default text color for hero */
+}
+
+.hero-content-container {
+  display: flex;
+  flex-direction: column; /* Stack heading and description by default */
+  justify-content: flex-end; /* Align items to bottom of this container */
+  padding-left: 1rem; /* px-4 (adjust as needed) */
+  padding-right: 1rem; /* px-4 */
+  padding-bottom: 1rem; /* Give some space from the banner */
+  gap: 2rem; /* gap-8 */
+  position: relative; /* For pseudo-elements */
+}
+
+.hero-main-heading {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600; /* Default boldness, example uses variable font weights */
+  text-align: left; /* Align text to left in mobile view */
+}
+
+.hero-heading-line {
+  display: block; /* Each line of text on its own row */
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 1.1; /* Adjust for tight leading */
+}
+
+.char-animated-wrapper {
+  display: inline-block;
+  white-space: pre; /* to preserve spaces if any */
+}
+
+.char-animated {
+  display: inline-block;
+  white-space: pre;
+  /* Basic static representation, animation would be JS driven */
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.hero-description {
+  position: relative; /* For pseudo-element */
+  font-size: 1rem; /* text-base */
+  line-height: 1.6;
+  color: #111827; /* Default dark text for description */
+  text-align: left; /* Align left in mobile view */
+}
+
+/* Hero Banner Styles */
+.hero-banner-container {
+  position: relative; /* Contains the absolutely positioned banner */
+  min-height: 24rem; /* min-h-96 */
+  height: 40vh; /* h-[40vh] */
+}
+
+.hero-banner-content {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 40vh; /* Match container */
+  width: 100%; /* Match viewport width */
+  padding: 18px; /* Matches example.html */
+  border-top-left-radius: 24px; /* Matches example.html */
+  border-top-right-radius: 24px; /* Matches example.html */
+  z-index: 20;
+}
+
+.hero-banner-background {
+  width: 100%;
+  height: 100%;
+  background-origin: content-box; /* bg-origin-content */
+  background-position: center; /* bg-center */
+  background-size: cover; /* bg-cover */
+  overflow: hidden;
+  /* Using hero background image */
+  background-image: url("/kstacks_website_hero.png");
+  background-repeat: no-repeat;
+  /* background-size: contain; (example.html uses this, but cover might be better for full div) */
+  /* background-position: 0% 0%; */
+}
+
+.hero-banner-scroll-button {
+  display: flex; /* To center icon */
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 1.5rem; /* bottom-6 */
+  left: 1.5rem; /* left-6 */
+  background-color: rgba(255, 255, 255, 0.6); /* bg-white/60 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem; /* p-2 */
+  border: none;
+  border-radius: 0.375rem; /* rounded-md */
+  cursor: pointer;
+  opacity: 1; /* Static, example has animation */
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner-scroll-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-button-icon-wrapper {
+  padding: 0.5rem; /* p-2 from example icon div */
+  /* hover:bg-accent - this class is not defined, using parent hover */
+  border-radius: 0.375rem; /* rounded-md */
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-scroll-button svg {
+  stroke: #111827; /* Default icon color */
+}
+
+.hero-banner-cta-link {
+  position: absolute;
+  top: 1.5rem; /* top-6 */
+  right: 1.5rem; /* right-6 */
+  text-decoration: none;
+}
+
+.hero-banner-cta-button {
+  display: flex;
+  cursor: pointer;
+  gap: 0.5rem; /* space-x-2 */
+  background-color: rgba(255, 255, 255, 0.6); /* bg-white/60 */
+  backdrop-filter: blur(12px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border: none;
+  border-radius: 0.375rem; /* rounded-md */
+  opacity: 1; /* Static, example has animation */
+  color: #111827;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner-cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments for Hero Section */
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .hero-content-container {
+    flex-direction: row; /* Align heading and description side by side */
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 1.5rem; /* md:px-6 */
+    padding-right: 1.5rem;
+    padding-bottom: 2rem; /* More space on larger screens */
+  }
+
+  .hero-main-heading {
+    width: 50%; /* md:w-1/2 */
+  }
+
+  .hero-heading-line {
+    font-size: 3rem; /* md:text-5xl */
+  }
+
+  .hero-description {
+    max-width: 24rem; /* md:max-w-96 (96 * 0.25rem) */
+    font-size: 1rem; /* md:text-md - assuming md is slightly larger than base */
+    margin-left: 2rem; /* md:ml-8 */
+    position: relative;
+    text-align: right; /* Restore right alignment for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg breakpoint */
+  .hero-content-container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem;
+  }
+
+  .hero-heading-line {
+    font-size: 4.5rem; /* lg:text-7xl */
+  }
+  .hero-description {
+    /* max-width remains same as md, font-size too unless specified */
+  }
+}
+
+/* Services Section Styles */
+.services-section-marzipan {
+  display: flex;
+  flex-direction: column; /* Default for desktop, as per user's change */
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 5rem 2rem; /* py-24 (approx) px-8 */
+  /* background: linear-gradient(to top, #FCFBFB 0%, #FFFFFF 10%); from-indigo-50 via-white to-white */
+  /* background: linear-gradient(to bottom, #f0f8ff, #ffffff 50%, #f0f8ff); Example subtle gradient */
+  background-color: #f9fafb; /* A light gray similar to Tailwind shades like gray-50 or indigo-50 */
+  gap: 2rem;
+}
+
+.services-intro-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem; /* space-y-8 */
+  font-family: "Inter", sans-serif; /* font-serif in example, but Inter is loaded */
+}
+
+.services-intro-text-container p {
+  color: #111827; /* Dark text color for paragraphs */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustment for services section flex-direction */
+@media (max-width: 768px) {
+  .services-section-marzipan {
+    flex-direction: column;
+  }
+  .services-intro-text-container {
+    padding-bottom: 2rem; /* py-24 for whole section, so some for top/bottom here */
+  }
+}
+
+.services-intro-text {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 1.5;
+
+  color: #111827; /* text-black */
+}
+
+.services-intro-text span {
+  margin-right: 0.625rem; /* mr-2.5 */
+  display: inline-block;
+  opacity: 0.4; /* Default opacity for staggered effect, actual animation is JS */
+  /* For demo, set all to visible for now */
+  /* opacity: 1; */
+}
+
+.services-list-container {
+  /* min-height: 32rem; /* From example */
+  width: 100%; /* w-72 (18*16px = 288px), adjust as needed */
+  /* padding-bottom: 6rem; /* py-24 for whole section */
+}
+
+.services-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* items-start implied by flex-col and default align-items */
+  border-top: 1px solid #e5e7eb; /* divide-y divide-gray-200 */
+}
+
+.service-item {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.service-item-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.service-item-visible,
+.service-item-hidden {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  backface-visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-item-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: top center;
+}
+
+.service-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  padding: 0;
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0;
+  border-top: 0 solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-description-button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.service-item.active .service-description {
+  max-height: 400px;
+  padding: 1rem;
+  margin: 0;
+  opacity: 1;
+}
+
+.service-item.active .service-item-visible {
+  opacity: 0;
+  transform: rotateX(90deg) translateY(-50%);
+}
+
+.service-item.active .service-item-hidden {
+  opacity: 1;
+  transform: rotateX(0deg) translateY(0%);
+}
+
+.service-item:hover .service-item-visible {
+  opacity: 0;
+  transform: rotateX(90deg) translateY(-50%); /* Flip out */
+}
+
+.service-item:hover .service-item-hidden {
+  opacity: 1;
+  transform: rotateX(0deg) translateY(0); /* Flip in */
+}
+
+.service-name {
+  font-size: 1.25rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #1f2937; /* text-zinc-900 */
+  white-space: nowrap; /* text-nowrap */
+}
+
+.service-category-visible,
+.service-read-more {
+  font-size: 0.75rem; /* text-xs */
+  color: #6b7280; /* text-zinc-500 */
+  white-space: nowrap; /* text-nowrap */
+}
+
+/* Responsive for services list container and intro text */
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .services-intro-text-container {
+    padding-top: 0; /* sm:py-0 */
+    /* py-24 for section applies already */
+  }
+  .services-intro-text {
+    font-size: 2.25rem; /* sm:text-4xl */
+  }
+  .service-name {
+    font-size: 1.25rem; /* sm:w-80 */
+  }
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .service-category-visible,
+  .service-read-more {
+    font-size: 0.875rem; /* md:text-sm */
+  }
+
+  .service-name {
+    font-size: 1.25rem; /* sm:w-80 */
+  }
+}
+
+/* Add more styles below as we build the next sections */
+
+/* Testimonials Section Styles */
+.testimonials-section-marzipan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  min-height: 80vh;
+}
+
+.testimonials-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.testimonials-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  font-family: "Inter", sans-serif;
+}
+
+.testimonials-svg {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #034f46, #10b981);
+}
+
+.testimonial-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-star {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  transition: color 0.2s ease;
+}
+
+.testimonial-star.filled {
+  color: #fbbf24;
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: '"';
+  font-size: 4rem;
+  color: #034f46;
+  position: absolute;
+  top: -1rem;
+  left: -0.5rem;
+  line-height: 1;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.testimonial-author {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+}
+
+.testimonial-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-company {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive adjustments for Testimonials */
+@media (min-width: 640px) {
+  .testimonials-heading {
+    font-size: 3.5rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-heading {
+    font-size: 4rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .testimonial-item {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .testimonials-heading {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-item {
+    padding: 1.5rem;
+  }
+}
+
+/* About Us Section Styles */
+.aboutus-section-marzipan {
+  display: flex; /* Used to center content-wrapper if needed, but primarily for overall structure */
+  flex-direction: column; /* Children stack vertically */
+  justify-content: center; /* Center content vertically */
+  min-height: 75vh; /* min-h-[75vh] */
+  /* In example it has lg:h-screen. For simplicity, using min-height */
+  width: 100%; /* w-screen */
+  position: relative;
+  padding: 5rem 2rem;
+  background-color: #f9fafb; /* bg-gradient-to-b from-[#fcfbfb] from-0% to-white to-10% - simplified to light gray */
+  overflow: hidden; /* To contain the absolute lines */
+  gap: 2rem;
+}
+
+.aboutus-background-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05; /* opacity-5 */
+  display: flex;
+  justify-content: center; /* To center lines-container */
+  align-items: center; /* To center lines-container */
+  z-index: 0;
+}
+
+.aboutus-lines-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Make lines full height of container */
+  height: 100%;
+  width: 100%;
+  max-width: 1152px; /* max-w-7xl (72rem) */
+  padding: 0 1rem; /* Ensure lines don't touch edge if container is smaller than max-width */
+}
+
+.aboutus-lines-container .line {
+  height: 100%;
+  width: 1px;
+  background-color: #000000; /* bg-black */
+}
+
+.aboutus-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the .aboutus-content-container */
+  position: relative; /* Ensure content is above lines */
+  z-index: 1;
+}
+
+.aboutus-content-container {
+  display: flex;
+  flex-direction: column; /* Mobile first: stack columns */
+  justify-content: space-between;
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 1152px; /* max-w-7xl */
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem;
+}
+
+.aboutus-title-column {
+  width: 100%; /* Full width on mobile */
+  margin-bottom: 2rem; /* Space between title and description on mobile */
+}
+
+.aboutus-title {
+  position: relative; /* For pseudo-element */
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600; /* font-semibold */
+  font-family: "Inter", sans-serif; /* font-serif in example, but Inter is used */
+  color: #111827; /* Default dark text */
+  opacity: 1; /* Static for now */
+}
+
+.aboutus-title-span {
+  display: block; /* block */
+  opacity: 1; /* Static for now */
+  filter: blur(0px); /* Static for now */
+}
+
+.aboutus-image-column {
+  width: 100%; /* Full width on mobile */
+}
+
+.aboutus-description {
+  font-size: 1rem; /* text-base */
+  line-height: 1.75; /* Relaxed line height for readability */
+  color: #111827; /* Dark text color */
+  opacity: 1; /* Static for now */
+  max-width: 42rem; /* max-w-3xl, same as services intro for consistency */
+}
+
+.aboutus-description-block {
+  display: block; /* Each span is a paragraph */
+  margin-bottom: 1em; /* Space between paragraphs */
+  opacity: 1; /* Static for now */
+  filter: blur(0px); /* Static for now */
+}
+
+.aboutus-description-block:last-child {
+  margin-bottom: 0;
+}
+
+.aboutus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutus-social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.125rem;
+}
+
+.social-link:hover {
+  background-color: #111827;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive for About Us section */
+@media (min-width: 640px) {
+  /* sm breakpoint (Tailwind default) */
+  .aboutus-content-container {
+    padding-left: 1rem; /* sm:px-4 */
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .aboutus-title {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+  .aboutus-description {
+    font-size: 1rem; /* md:text-md (assuming text-md is like text-base or slightly larger) */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile view - remove horizontal padding */
+  .aboutus-content-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* xl (from example.html uses xl for column layout) */
+  .aboutus-content-container {
+    flex-direction: row; /* Side-by-side columns */
+    justify-content: space-between;
+    align-items: flex-start; /* xl:items-start */
+    padding-left: 0; /* xl:px-0 if max-w-7xl handles padding */
+    padding-right: 0;
+  }
+  .aboutus-title-column {
+    width: auto; /* Let content define width, or set a specific proportion e.g. 30% */
+    flex-shrink: 0; /* Prevent shrinking if description is long */
+    margin-bottom: 0; /* No margin when side-by-side */
+    /* max-w-3xl from example on parent p, we can apply similar logic if needed or width constraint */
+  }
+  .aboutus-description-column {
+    width: auto; /* Let content define width */
+    max-width: 42rem; /* max-w-3xl on the p tag in example */
+  }
+}
+
+/* Add more styles below as we build the next sections */
+
+/* Client Logos Section Styles */
+.client-logos-section {
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.logos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logos-heading {
+  font-size: 1rem;
+  color: #111827;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.client-logo {
+  max-width: 120px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+.logos-footer-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .client-logos-section {
+    padding: 3rem 1rem;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .client-logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .logos-heading {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-grid {
+    gap: 1rem;
+  }
+
+  .client-logo {
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+
+/* Legal Pages Styles */
+.legal-page {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.legal-content {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.legal-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #111827;
+  padding-bottom: 1rem;
+}
+
+.legal-last-updated {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.legal-section {
+  margin-bottom: 2rem;
+}
+
+.legal-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.legal-section p {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.legal-list {
+  color: #374151;
+  line-height: 1.6;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-list li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-link {
+  color: #111827;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .legal-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .legal-title {
+    font-size: 2rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Footer Section Styles */
+.footer-marzipan {
+  position: relative; /* For absolute positioning of scrolling text */
+  /* height: 500px; /* From example.html h-[500px] on outer div */
+  /* overflow: hidden; /* To clip the scrolling text if it exceeds footer height. Example had scroll on outer, fixed on inner */
+  background-color: #efece5; /* Light beige background */
+  /* background-image: url("../images/kstacks_footer_image.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000000; /* Black text for footer */
+  display: flex;
+  flex-direction: column; /* Stack content and scrolling text container */
+  justify-content: space-evenly; /* Push copyright to bottom if content allows */
+  padding: 1.5rem; /* p-6, can be adjusted */
+  min-height: 500px; /* Ensure it has height like example */
+  height: 100%;
+}
+
+.footer-content-container {
+  position: relative; /* To be above scrolling text if needed, though z-index handles it */
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* main content vs contact info / copyright */
+  min-height: 450px;
+  height: 100%; /* Try to fill the .footer-marzipan height */
+}
+
+.footer-copyright {
+  /* Fixed to bottom of viewport */
+  bottom: 0.25rem; /* bottom-1 */
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* text-zinc-500 */
+  border-radius: 0.375rem;
+  z-index: 1000; /* Above other content */
+}
+
+.footer-main-content {
+  display: flex;
+  justify-content: space-between; /* links column vs empty space/other content */
+  /* flex-grow: 1; /* Allow it to take up space */
+  /* margin-bottom: auto; /* Push towards top, letting contact info be lower */
+}
+
+.footer-links-column {
+  display: flex;
+  flex-direction: row; /* Use flex-row for footer items */
+  gap: 2rem; /* space-x-8 */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .footer-links-column {
+    flex-direction: row; /* Side-by-side link groups on desktop */
+    gap: 2rem; /* space-x-8 */
+  }
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem; /* text-sm */
+}
+
+.footer-link-heading {
+  color: #374151; /* Darker color for better contrast on light background */
+  margin-bottom: 1rem; /* mb-4 */
+  font-size: 0.75rem; /* text-xs */
+}
+
+.footer-mission-text {
+  text-transform: uppercase; /* uppercase */
+  max-width: 400px; /* max-w-[250px] */
+  color: #000000; /* Black text */
+  line-height: 1.4;
+}
+
+.footer-link {
+  color: #000000; /* Black text */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #374151; /* Darker gray for hover */
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: auto;  Push to bottom of its flex container space */
+  /* padding-bottom: 3rem; /* Space above copyright and scrolling text if needed */
+}
+
+.footer-contact-prompt {
+  color: #374151; /* Darker color for better contrast */
+  font-size: 0.75rem; /* text-xs */
+  margin-left: 0.125rem; /* ml-0.5 */
+  margin-bottom: 0.25rem;
+}
+
+.footer-contact-email {
+  color: #000000; /* Black text */
+  font-size: 1.25rem; /* text-xl */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-email:hover {
+  color: #374151; /* Darker gray for hover */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .footer-contact-email {
+    font-size: 1.875rem; /* sm:text-3xl */
+  }
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .footer-contact-email {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+}
+
+/* Scrolling Text Styles */
+.footer-scrolling-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  /* [mask-image:linear-gradient(to_bottom,white_20%,transparent)] - complex, creates fade */
+  /* Simplified: ensure it doesn't overlap important text or adjust z-index carefully */
+  z-index: 1; /* Below main content (z-index 10) but above footer bg */
+  pointer-events: none; /* So it doesn't interfere with clicks */
+  padding-bottom: 1rem; /* Give it some space from very bottom edge */
+}
+
+.footer-scrolling-text-track {
+  display: flex;
+  width: fit-content; /* Allow it to be as wide as its content */
+  animation: scroll-text 20s linear infinite;
+}
+
+.scrolling-text-item {
+  font-size: 6rem; /* text-9xl */
+  line-height: 1; /* leading-[100%] */
+  color: transparent;
+  /* text-shadow:1px_1px_1px_rgba(255,255,255,.1),-1px_-1px_1px_rgba(0,0,0,.5),-40px_-40px_0px_rgba(0,0,0,0)]; */
+  /* Simplified text-shadow for visibility on black background */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1); /* Approximation of shadow */
+  color: rgba(255, 255, 255, 100); /* Very faint fill */
+  white-space: nowrap;
+  padding-right: 80px; /* gap: 80px from example */
+  font-weight: 600; /* Give it some presence */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .scrolling-text-item {
+    font-size: 8rem; /* sm:text-[12rem] - adjusted for better fit typically */
+  }
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Scrolls one full item width if two items present */
+  }
+}
+
+/* Final closing comment for styles */
+
+/* New Mobile Menu Styles (replacing/augmenting old .mobile-menu-content styles) */
+.mobile-menu-marzipan {
+  /* This is the new #mobile-menu-content */
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  right: 0; /* Changed from left: 0 */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: #000000; /* bg-black */
+  z-index: 150; /* z-[150] */
+  overflow-y: auto; /* Allow scroll if content exceeds height */
+  flex-direction: column; /* Ensure children stack if display:flex is used by .active */
+  color: #ffffff; /* Default text color white */
+}
+
+.mobile-menu-marzipan.active {
+  display: flex; /* Show the menu */
+}
+
+.mobile-menu-header-marzipan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem; /* py-4 px-6 */
+  /* border-bottom: 1px solid #4B5563; /* Optional: subtle border if needed */
+}
+
+.mobile-menu-logo-link {
+  /* text-2xl font-bold leading-none font-serif text-white */
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  line-height: 1; /* leading-none */
+  font-family: "Inter", sans-serif; /* Reverting to Inter, example used font-serif */
+  color: #ffffff; /* text-white */
+  text-decoration: none;
+}
+
+.mobile-menu-close-button-marzipan {
+  display: flex; /* flex items-center */
+  align-items: center;
+  /* h-fit not directly translatable, padding defines size */
+  padding: 0.5rem; /* p-2 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-close-button-marzipan .menu-icon {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+  color: #ffffff; /* text-white */
+}
+
+.mobile-menu-main-content-marzipan {
+  padding: 1.5rem; /* p-6 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to start */
+}
+
+.mobile-menu-cta-heading {
+  /* text-white text-4xl font-bold mb-6 */
+  color: #ffffff;
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+  line-height: 1.2;
+  /* opacity: 1; transform: none; (static by default) */
+}
+
+.mobile-menu-contact-button-marzipan {
+  /* bg-white rounded-full text-black px-6 py-2 cursor-pointer */
+  background-color: #ffffff;
+  border-radius: 9999px; /* rounded-full */
+  color: #000000;
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  border: none;
+  /* opacity: 1; transform: none; (static by default) */
+}
+
+.mobile-menu-divider-marzipan {
+  /* !my-6 border-neutral-400 */
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  border-color: #a3a3a3; /* neutral-400 approx */
+  border-top-width: 1px;
+  width: 100%;
+  /* opacity: 1; transform: none; (static by default) */
+}
+
+.mobile-menu-nav-links-marzipan {
+  /* flex flex-col space-y-4 */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+  width: 100%;
+  /* opacity: 1; transform: none; (static by default) */
+}
+
+.mobile-menu-link-item-marzipan {
+  /* flex items-center justify-between space-x-4 px-3 py-1.5 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* space-x-4 */
+  padding: 0.375rem 0.75rem; /* px-3 py-1.5 */
+  width: 100%;
+}
+
+.mobile-menu-nav-link-text-marzipan {
+  /* text-white text-lg text-nowrap */
+  color: #ffffff;
+  font-size: 1.125rem; /* text-lg */
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mobile-menu-link-line-marzipan {
+  /* w-full h-px bg-neutral-400 */
+  flex-grow: 1; /* w-full (takes available space) */
+  height: 1px;
+  background-color: #a3a3a3; /* neutral-400 approx */
+}
+
+.mobile-menu-link-icon-marzipan {
+  /* text-white text-lg leading-none */
+  color: #ffffff;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1; /* leading-none */
+}
+
+/* Remove or adjust old mobile menu styles if they conflict */
+/* The old .mobile-menu-content will be replaced by .mobile-menu-marzipan */
+/* Ensure old .mobile-menu-header, .mobile-nav-links, .mobile-nav-link are not interfering */
+/* Keeping .mobile-menu-content.active selector for JS compatibility */
+.mobile-menu-content {
+  /* This class might be on the old menu structure. */
+  /* If .mobile-menu-marzipan is the new #mobile-menu-content, this style block is less relevant */
+  /* unless for some fallback or if the class name wasn't fully changed in HTML. */
+  /* For safety, let's ensure these old specific styles are overridden or removed if not needed. */
+}
+.mobile-menu-header {
+  /* old class */
+  display: none !important;
+}
+.mobile-nav-links {
+  /* old class */
+  display: none !important;
+}
+.mobile-nav-link {
+  /* old class */
+  display: none !important;
+}
+
+/* Gallery Page Styles */
+.gallery-header-section {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.gallery-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.gallery-section-title {
+  font-size: 2.5rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: #111827; /* text-gray-900 */
+  margin-bottom: 1rem; /* mb-4 */
+  text-align: center;
+}
+
+.gallery-section-subtitle {
+  font-size: 1.125rem; /* text-lg */
+  color: #6b7280; /* text-gray-500 */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+.gallery-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-section {
+  padding-top: 2rem;
+  background-color: #f9fafb;
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Responsive Image Grid - Based on W3Schools example */
+.gallery-responsive-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-column {
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 8px;
+}
+
+.gallery-image-container {
+  position: relative;
+  margin-bottom: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+}
+
+.gallery-image-container:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-responsive-image {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* Remove rounded corners */
+  transition: opacity 0.3s ease;
+}
+
+.gallery-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image-container:hover .gallery-image-overlay {
+  transform: translateY(0);
+}
+
+.gallery-image-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.gallery-image-story {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Gallery Item Base Styles */
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Removed duplicate gallery-image-container - using the one above */
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-content {
+  text-align: left;
+}
+
+.gallery-item-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.gallery-item-story {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.gallery-item-date {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+  display: block;
+}
+
+/* Size Variants for Dynamic Layout */
+.gallery-item.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item.featured .gallery-image-container {
+  height: 500px;
+}
+
+.gallery-item.large {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery-item.large .gallery-image-container {
+  height: 400px;
+}
+
+.gallery-item.medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery-item.medium .gallery-image-container {
+  height: 300px;
+}
+
+.gallery-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery-item.small .gallery-image-container {
+  height: 250px;
+}
+
+/* Active nav link styling for gallery */
+.nav-link.active,
+.mobile-nav-link.active {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Responsive Design for Gallery */
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 12px;
+  }
+
+  .gallery-image-container {
+    margin-bottom: 20px;
+  }
+
+  .gallery-title {
+    font-size: 4rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .gallery-column {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+
+  .gallery-image-container {
+    margin-bottom: 24px;
+  }
+
+  .gallery-item.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item.featured .gallery-image-container {
+    height: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .gallery-image-container {
+    margin-bottom: 16px;
+  }
+
+  .gallery-item.featured,
+  .gallery-item.large,
+  .gallery-item.medium,
+  .gallery-item.small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .gallery-item .gallery-image-container {
+    height: 300px;
+  }
+
+  .gallery-title {
+    font-size: 2.5rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* Final closing comment for styles */
