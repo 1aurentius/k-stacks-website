@@ -1,4 +1,4 @@
-# Marzipan Website
+# k&stacks Website
 
 Personal website for Krister Alasaarela - Custom software solutions for startups and small businesses.
 
@@ -17,7 +17,7 @@ The website is deployed as a static site on Render.com.
 ## 📁 Project Structure
 
 ```
-marzipan/
+k&stacks_website/
 ├── public/                 # Static assets (images, icons, robots.txt, sitemap.xml)
 ├── src/
 │   ├── components/        # React components
@@ -48,7 +48,7 @@ marzipan/
 
 ```bash
 git clone <your-repo-url>
-cd marzipan
+cd k&stacks_website
 ```
 
 2. Install dependencies:
