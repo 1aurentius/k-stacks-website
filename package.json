@@ -1,9 +1,9 @@
 {
-  "name": "marzipan-website",
+  "name": "kstacks-website",
   "version": "1.0.0",
   "description": "Personal website for Krister Alasaarela",
   "type": "module",
-  "scripts": {
+  "scripts": {  
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

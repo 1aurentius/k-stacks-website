@@ -437,6 +437,7 @@ main.site-main {
   height: 100vh;
   position: relative;
   color: #000000; /* Default text color for hero */
+  gap: 2rem;
 }
 
 .hero-content-container {
@@ -487,7 +488,6 @@ main.site-main {
 /* Hero Banner Styles */
 .hero-banner-container {
   position: relative; /* Contains the absolutely positioned banner */
-  min-height: 24rem; /* min-h-96 */
   height: 40vh; /* h-[40vh] */
 }
 
