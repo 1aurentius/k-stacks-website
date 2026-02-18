@@ -7,14 +7,14 @@ const Footer = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   const scrollingTextItems = [
-    "MARZIPAN",
-    "SOFTWARE",
-    "SOLUTIONS",
-    "AI AUTOMATION",
-    "MARZIPAN",
-    "SOFTWARE",
-    "SOLUTIONS",
-    "AI AUTOMATION",
+    "K & STACKS",
+    "AI TRANSFORMATION",
+    "PRODUCT DEVELOPMENT",
+    "AI CONSULTING",
+    "K & STACKS",
+    "AI TRANSFORMATION",
+    "PRODUCT DEVELOPMENT",
+    "AI CONSULTING",
   ];
 
   useEffect(() => {
@@ -29,21 +29,22 @@ const Footer = () => {
             <div className="footer-link-group">
               <p className="footer-link-heading">MY MISSION</p>
               <p className="footer-mission-text">
-                Help intentional founders adopt AI with purpose and build
-                products people love.
+                Help companies build the AI infrastructure to go from pilots to
+                production — with context engineering at the core.
               </p>
             </div>
 
             <div className="footer-link-group">
-              <p className="footer-link-heading">THE COMPANY</p>K & Stacks Oy is
-              my personal consultancy company.
+              <p className="footer-link-heading">THE COMPANY</p>K & Stacks Oy —
+              AI transformation, product development, and consulting. Helsinki,
+              Finland.
             </div>
           </div>
         </div>
 
         <div className="footer-contact-info">
           <p className="footer-contact-prompt">
-            Interested in working with me?
+            Ready to talk about AI transformation?
           </p>
           <a href="https://calendar.app.google/VSL5R4En4SjyGSfR7" className="">
             <button type="button" className="nav-button-contact">

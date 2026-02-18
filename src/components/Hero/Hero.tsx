@@ -27,13 +27,12 @@ const Hero = () => {
         <h1 id="main-heading" className="hero-main-heading">
           <span className="hero-heading-line">
             {" "}
-            Your partner for AI ventures{" "}
+            I build AI infrastructure for companies.{" "}
           </span>
         </h1>
         <p className="hero-description">
-          I work with startups to build products people love and adopt AI with
-          purpose. My approach is fast, affordable, and free of unnecessary
-          complexity.
+          From data foundations to deployed agents — I help companies set up the
+          AI systems that actually transform how they work.
         </p>
       </div>
       <div className="hero-banner-container">

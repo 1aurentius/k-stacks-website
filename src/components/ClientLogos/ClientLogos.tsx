@@ -2,7 +2,7 @@ const ClientLogos = () => {
   return (
     <section className="client-logos-section" id="client-logos-section">
       <div className="logos-container">
-        <h4 className="logos-heading">Ventures I've supported</h4>
+        <h4 className="logos-heading">Companies I've worked with</h4>
         <div className="logos-grid">
           <img
             src="/equel_logo_black.svg"

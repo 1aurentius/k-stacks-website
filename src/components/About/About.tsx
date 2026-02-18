@@ -30,23 +30,18 @@ const About = () => {
     };
   }, []);
 
-  const aboutText = `Hey! I'm Krister Alasaarela, the founder and sole developer behind Marzipan. 
-    I specialize in creating custom software solutions that help businesses transform their operations 
-    through AI and automation. With years of experience in full-stack development and a passion for 
-    cutting-edge technology, I work closely with each client to understand their unique challenges 
-    and build tailored solutions that drive real results. 
-    
-    My approach is rooted in trust, integrity, and transparency - every project begins with a 
-    collaborative session where we align on goals and scope. I believe in creating software that 
-    not only solves problems but also empowers businesses to thrive in an increasingly digital world.`;
+  const aboutText = `I'm Krister Alasaarela, the founder of K & Stacks Oy.
+    I build AI infrastructure for companies — from data foundations to deployed agents.
+    With a Bachelor's in Computer Science and deep experience in agentic systems,
+    I help organizations set up the AI systems that actually transform how they work.`;
 
   return (
     <section className="aboutus-section-marzipan" id="aboutus-section">
       <div className="services-intro-text-container">
         <div className="services-intro-text">About me —</div>
         <p>
-          I wanted to share a few moments and thoughts from my journey below. If
-          my story resonates with yours, I'd love to connect and hear about it.
+          I started K & Stacks after years of building products, growing
+          companies, and going deep on AI. A few moments from the journey below.
         </p>
       </div>
 
@@ -60,20 +55,20 @@ const About = () => {
         </div>
         <div className="aboutus-title-column">
           <p className="aboutus-description">
-            My work begins with presence. It isn't just a practice; it's the
-            commitment that ensures everything we create together is
-            intentional, purposeful, and built on a bedrock of trust. This
-            belief was shaped by my own journey, a fun mix of influences from
-            the creative chaos of Berlin to the forward-thinking energy of the
-            Bay Area. Through it all, life's most beautiful lesson has been to
-            find clarity in the noise through a simple, happy pursuit: exploring
-            how to be a more present and loving human being. This is how I work.
-            I lead with my heart, bring my full self to every project, and
-            partner with people who are ready to do the same. Working
-            intuitively allows us to have the honest conversations needed to
-            focus on what truly matters, making the process of change and growth
-            both smooth and rewarding. Let's build something meaningful, and
-            enjoy the journey of getting there.
+            I'm Krister Alasaarela, founder of K & Stacks Oy. I have a
+            Bachelor's in Computer Science and I've been building with AI
+            tools since they first became capable enough to matter. Context
+            engineering is at the core of everything I do — making sure AI
+            systems truly understand your business before you scale. I don't
+            just advise — I'm an engineer who writes code, designs
+            architectures, and ships products. For larger projects, I bring
+            in a close-knit network of exceptional product and engineering
+            talent I've worked with and trust. I work with companies across
+            the Nordics — from venture builders and investment firms to event
+            technology platforms, media companies, and sustainability
+            consultancies. The common thread: a real business problem and an
+            opportunity to solve it with AI infrastructure built to last.
+            Based in Helsinki.
           </p>
 
           <div className="aboutus-social-links">

@@ -17,7 +17,7 @@ const ServiceItem = ({ service, isActive, onClick }: ServiceItemProps) => {
         <div className="service-item-visible">
           <span className="service-name">{service.name}</span>
           <span className="service-category-visible">
-            Starting at {service.startingPrice}€
+            {service.category}
           </span>
         </div>
         <div className="service-item-hidden">

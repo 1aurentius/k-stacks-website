@@ -15,14 +15,12 @@ const Services = () => {
   return (
     <section className="services-section-marzipan" id="services-section">
       <div className="services-intro-text-container">
-        <div className="services-intro-text">Services —</div>
+        <div className="services-intro-text">How I work —</div>
         <p>
-          My work is grounded in presence to ensure every project is approached
-          with clear intention and purpose. Every partnership is built on trust
-          and transparency, and every engagement begins with a deep alignment
-          session to define the scope and vision together. The listed starting
-          prices offer a baseline; a final quote will be tailored to your
-          project's specific needs after our initial session.
+          Every engagement starts with understanding your specific context —
+          your data, your workflows, your team. That's what makes AI work. I
+          offer three ways to work together, each grounded in the same principle:
+          build the right foundation first, then scale with confidence.
         </p>
       </div>
 

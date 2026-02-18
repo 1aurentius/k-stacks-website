@@ -174,7 +174,7 @@ const Navigation = () => {
 
         <div className="mobile-menu-main-content-marzipan">
           <div className="mobile-menu-cta-heading">
-            Let's start creating together
+            Let's talk about AI transformation
           </div>
           <a href="https://calendar.app.google/VSL5R4En4SjyGSfR7">
             <button
