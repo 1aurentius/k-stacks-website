@@ -1,42 +1,35 @@
 {
-  "name": "kstacks-website",
-  "version": "1.0.0",
-  "description": "Personal website for Krister Alasaarela",
-  "type": "module",
-  "scripts": {  
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-  },
-  "keywords": [
-    "website",
-    "portfolio",
-    "gallery",
-    "react",
-    "typescript"
-  ],
-  "author": "Krister Alasaarela",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.56",
-    "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.4"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "kstacks-website",
+	"version": "2.0.0",
+	"description": "Personal website for Krister Alasaarela",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"keywords": [
+		"website",
+		"portfolio",
+		"gallery",
+		"svelte",
+		"sveltekit",
+		"typescript"
+	],
+	"author": "Krister Alasaarela",
+	"license": "MIT",
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/kit": "^2.15.2",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"svelte": "^5.16.0",
+		"svelte-check": "^4.1.4",
+		"typescript": "^5.7.3",
+		"vite": "^6.0.7"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
 }
-
