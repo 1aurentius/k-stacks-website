@@ -44,7 +44,10 @@ Thumbs.db
 tmp/
 temp/
 
-# Build outputs (if you add a build process later)
+# SvelteKit
+.svelte-kit/
+
+# Build outputs
 dist/
 build/
 
