@@ -4,9 +4,9 @@
 
 <section class="border-top" id="services">
   <div class="section-inner">
-    <div class="section-label">Services</div>
-    <h2 class="section-title">My work is always scoped clearly.</h2>
-    <p class="section-subtitle">We align on goals first, then move. Every engagement starts with a discovery call. Prices are starting points; final quotes are tailored to your situation.</p>
+    <div class="section-label">What I Do</div>
+    <h2 class="section-title">Three ways I work with companies.</h2>
+    <p class="section-subtitle">Every engagement starts with understanding your specific context. That's what makes AI work.</p>
 
     <div class="service-cards">
       {#each servicesData as service (service.id)}

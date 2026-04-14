@@ -14,43 +14,67 @@ export interface Service {
 
 export const servicesData: Service[] = [
   {
-    id: 'ai-strategy-workshop',
+    id: 'ai-transformation',
     number: '01',
-    name: 'AI Strategy Workshop',
-    for: 'from €500',
+    name: 'AI Transformation',
+    for: 'For companies ready to go from pilots to production.',
     description:
-      "A focused session — typically half a day — where we map your workflows, identify where AI creates real leverage, and build a prioritized roadmap. You walk away with a clear picture of what to build, what to buy, and what to skip. I've run these for Bangeri, Coventures, and others across logistics, sustainability, and SaaS.",
-    items: [],
-    examples: [],
+      'I build the AI infrastructure that lets you deploy dozens of agents across your organization. Context engineering is at the core — every system I build starts with making sure your AI actually understands your business.',
+    items: [
+      'Auditing and restructuring your existing data for AI consumption',
+      'Setting up databases and pipelines that agents can work with',
+      'Deploying multi-agent architectures tailored to your workflows',
+      'Enriching your data to unlock capabilities you didn\'t know you had',
+      'Training your team on AI best practices — from prompting to process design',
+      'Building governance frameworks so you can scale with confidence',
+    ],
+    examples: [
+      {
+        text: 'For a Nordic venture builder, I set up the full AI infrastructure across their organization — data foundations, agent deployment pipelines, and team enablement — positioning them to scale AI operations across their portfolio companies.',
+      },
+    ],
   },
   {
-    id: 'ai-agents-automation',
+    id: 'product-development',
     number: '02',
-    name: 'AI Agents & Automation',
-    for: 'from €2,000',
+    name: 'Product Development',
+    for: 'For companies building AI-powered products.',
     description:
-      'Custom agents and automated workflows that eliminate manual work. I design and build the system, choose the right stack (Python, n8n, make.com, or custom), and make sure it runs reliably in your environment. Recent example: AI agents that automate content optimization and monitoring for a sustainability platform.',
-    items: [],
-    examples: [],
+      "I'm an agentic engineer with a Bachelor's in Computer Science. I don't just consult — I build. The reason to work with me is presence: I'm in the codebase, in the room with your customers, and deeply invested in solving the right problems. For larger projects, I bring in a close-knit network of exceptional product and engineering talent.",
+    items: [
+      'Full-stack product development with AI at the core',
+      'Architecture design and backend engineering',
+      'AI-powered features: search, matching, content generation, automation',
+      'Rapid prototyping and MVP development',
+      'Product strategy rooted in customer conversations',
+    ],
+    examples: [
+      {
+        text: 'I architected a capital intelligence platform for an energy transition investment firm — investor profiling, AI-driven deal matching, gated member access, and automated communications.',
+      },
+      {
+        text: 'For an event technology company, I\'m leading product development that includes backend architecture migration, simulation tools for resource planning, and AI-powered operations monitoring.',
+      },
+    ],
   },
   {
-    id: 'mvp-product',
+    id: 'ai-consulting',
     number: '03',
-    name: 'MVP & Product',
-    for: 'from €5,000',
+    name: 'AI Consulting',
+    for: 'For companies getting serious about AI.',
     description:
-      "From idea to working product. I'll help you define what to build for maximum learning, then build it — full-stack, fast, and without unnecessary complexity. I build on modern stacks (SvelteKit, Next.js, React, Node.js) and integrate AI where it earns its place.",
-    items: [],
-    examples: [],
-  },
-  {
-    id: 'consultation',
-    number: '04',
-    name: 'Consultation',
-    for: "Let's talk",
-    description:
-      "Some challenges don't fit a template. If you're navigating a tricky AI decision, need a second opinion on a product direction, or want to think through an edge case with someone who's seen a lot — book a call. First 30 minutes is free.",
-    items: [],
-    examples: [],
+      "Not every company needs a full transformation. Sometimes you need someone who's been in the trenches to help you figure out where to start, what's real, and how to build internal capabilities.",
+    items: [
+      '1-on-1 executive and founder mentoring on AI strategy and tools',
+      'Company-wide workshops on AI best practices and workflows',
+      'In-house development of AI processes and lightweight agents',
+      'AI readiness assessments and roadmapping',
+      'Ongoing advisory and sparring',
+    ],
+    examples: [
+      {
+        text: "I work with founders and executives 1-on-1, helping them go from \"I know AI is important\" to actually using it to multiply their output — from building their first agents to rethinking how their teams work.",
+      },
+    ],
   },
 ];

@@ -26,7 +26,7 @@
 
 <nav class="main-nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">K &amp; Stacks</a>
+    <a href="/" class="nav-logo">Krister Alasaarela <span>/ K &amp; Stacks</span></a>
 
     <button
       class="nav-hamburger"
@@ -38,20 +38,18 @@
     </button>
 
     <ul class="nav-links" role="list">
-      <li><button onclick={() => navClick('#case-studies-section')}>Work</button></li>
       <li><button onclick={() => navClick('#services')}>Services</button></li>
+      <li><button onclick={() => navClick('#why')}>Why Me</button></li>
       <li><button onclick={() => navClick('#about')}>About</button></li>
-      <li><button onclick={() => navClick('#partners-section')}>Partners</button></li>
-      <li><button onclick={() => navClick('#contact')} class="nav-cta">Contact</button></li>
+      <li><button onclick={() => navClick('#contact')} class="nav-cta">Let's Talk</button></li>
     </ul>
   </div>
 
   <div class="nav-mobile {mobileOpen ? 'open' : ''}" role="menu">
-    <button onclick={() => navClick('#case-studies-section')}>Work</button>
     <button onclick={() => navClick('#services')}>Services</button>
+    <button onclick={() => navClick('#why')}>Why Me</button>
     <button onclick={() => navClick('#about')}>About</button>
-    <button onclick={() => navClick('#partners-section')}>Partners</button>
-    <button onclick={() => navClick('#contact')} class="nav-cta">Contact</button>
+    <button onclick={() => navClick('#contact')} class="nav-cta">Let's Talk</button>
   </div>
 </nav>
 
