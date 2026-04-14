@@ -2,6 +2,12 @@ export interface ServiceExample {
   text: string;
 }
 
+export interface ServicePhase {
+  label: string;
+  name: string;
+  description: string;
+}
+
 export interface Service {
   id: string;
   number: string;
@@ -9,6 +15,7 @@ export interface Service {
   for: string;
   description: string;
   items: string[];
+  phases?: ServicePhase[];
   examples: ServiceExample[];
 }
 
@@ -17,64 +24,78 @@ export const servicesData: Service[] = [
     id: 'ai-transformation',
     number: '01',
     name: 'AI Transformation',
-    for: 'For companies ready to go from pilots to production.',
+    for: 'Every workflow, examined and improved.',
     description:
-      'I build the AI infrastructure that lets you deploy dozens of agents across your organization. Context engineering is at the core — every system I build starts with making sure your AI actually understands your business.',
-    items: [
-      'Auditing and restructuring your existing data for AI consumption',
-      'Setting up databases and pipelines that agents can work with',
-      'Deploying multi-agent architectures tailored to your workflows',
-      'Enriching your data to unlock capabilities you didn\'t know you had',
-      'Training your team on AI best practices — from prompting to process design',
-      'Building governance frameworks so you can scale with confidence',
-    ],
-    examples: [
+      'A systematic three-phase process to identify automation opportunities across your organization, calculate their impact, and put the right tools in place.',
+    items: [],
+    phases: [
       {
-        text: 'For a Nordic venture builder, I set up the full AI infrastructure across their organization — data foundations, agent deployment pipelines, and team enablement — positioning them to scale AI operations across their portfolio companies.',
+        label: 'Phase 01',
+        name: 'Workflow mapping',
+        description:
+          'Interviews with leadership and key employees to document processes, tools, and time spent. We build a complete picture of how your organization actually works.',
+      },
+      {
+        label: 'Phase 02',
+        name: 'Opportunity identification',
+        description:
+          'A prioritized list of automation and AI opportunities with estimated time savings, implementation costs, and recommended tools for each.',
+      },
+      {
+        label: 'Phase 03',
+        name: 'Implementation',
+        description:
+          'Hands-on support building automations and deploying agents, enabling your team, measuring impact, and iterating based on results.',
       },
     ],
+    examples: [],
   },
   {
     id: 'product-development',
     number: '02',
     name: 'Product Development',
-    for: 'For companies building AI-powered products.',
+    for: 'Custom AI products from start to finish.',
     description:
-      "I'm an agentic engineer with a Bachelor's in Computer Science. I don't just consult — I build. The reason to work with me is presence: I'm in the codebase, in the room with your customers, and deeply invested in solving the right problems. For larger projects, I bring in a close-knit network of exceptional product and engineering talent.",
+      "I'm an engineer. I don't just advise — I build. End-to-end ownership from architecture to deployment, with AI integrated where it genuinely earns its place.",
     items: [
-      'Full-stack product development with AI at the core',
-      'Architecture design and backend engineering',
-      'AI-powered features: search, matching, content generation, automation',
-      'Rapid prototyping and MVP development',
-      'Product strategy rooted in customer conversations',
+      'Web applications',
+      'API development',
+      'System architecture',
+      'AI integration',
+      'Maintenance and support',
     ],
-    examples: [
-      {
-        text: 'I architected a capital intelligence platform for an energy transition investment firm — investor profiling, AI-driven deal matching, gated member access, and automated communications.',
-      },
-      {
-        text: 'For an event technology company, I\'m leading product development that includes backend architecture migration, simulation tools for resource planning, and AI-powered operations monitoring.',
-      },
-    ],
+    examples: [],
   },
   {
-    id: 'ai-consulting',
+    id: 'training-workshops',
     number: '03',
-    name: 'AI Consulting',
-    for: 'For companies getting serious about AI.',
+    name: 'Training & Workshops',
+    for: 'Practical AI training for your team.',
     description:
-      "Not every company needs a full transformation. Sometimes you need someone who's been in the trenches to help you figure out where to start, what's real, and how to build internal capabilities.",
+      'Hands-on sessions that get your team actually using AI — not just aware of it. Tailored to your tools and workflows, delivered in person or remotely.',
     items: [
-      '1-on-1 executive and founder mentoring on AI strategy and tools',
-      'Company-wide workshops on AI best practices and workflows',
-      'In-house development of AI processes and lightweight agents',
-      'AI readiness assessments and roadmapping',
-      'Ongoing advisory and sparring',
+      'Claude, ChatGPT, and Gemini',
+      'AI in software development',
+      'Prompt engineering',
+      'Building personal AI workflows',
+      'Vibe coding and agentic development',
     ],
-    examples: [
-      {
-        text: "I work with founders and executives 1-on-1, helping them go from \"I know AI is important\" to actually using it to multiply their output — from building their first agents to rethinking how their teams work.",
-      },
+    examples: [],
+  },
+  {
+    id: 'strategy-consulting',
+    number: '04',
+    name: 'Strategy Consulting',
+    for: 'Concrete plans and hands-on sparring.',
+    description:
+      "Not every company needs a full transformation. Sometimes you need someone who's seen a lot to help you figure out where to start, what to prioritize, and how to move.",
+    items: [
+      'AI readiness assessments',
+      'Technology roadmaps',
+      'Vendor evaluation',
+      'Implementation planning',
+      'Ongoing advisory',
     ],
+    examples: [],
   },
 ];
