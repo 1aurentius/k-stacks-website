@@ -71,21 +71,21 @@
   }
 
   .nav-links button.nav-cta {
-    background: var(--text);
+    background: var(--accent);
     color: #fff;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
     font-size: 0.85rem;
-    transition: all 0.2s;
+    transition: background 0.2s;
   }
 
   .nav-links button.nav-cta:hover {
-    background: var(--accent);
+    background: var(--accent-hover);
     color: #fff;
   }
 
   .nav-mobile button.nav-cta {
-    background: var(--text);
+    background: var(--accent);
     color: #fff;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
@@ -94,6 +94,6 @@
   }
 
   .nav-mobile button.nav-cta:hover {
-    background: var(--accent);
+    background: var(--accent-hover);
   }
 </style>
