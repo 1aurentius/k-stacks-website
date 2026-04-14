@@ -6,8 +6,8 @@ export const servicesData: Service[] = [
     name: 'AI Transformation',
     category: 'Artificial Intelligence',
     tagline: 'Every workflow, examined and improved.',
+    catchphrase: 'Systematic. Measurable. End-to-end.',
     description: 'A systematic three-phase process to map your organization\'s workflows, identify where AI creates real leverage, and put the right tools in place.',
-    startingPrice: 0,
     phases: [
       {
         label: 'Phase 01',
@@ -31,8 +31,8 @@ export const servicesData: Service[] = [
     name: 'Software Engineering',
     category: 'Product Development',
     tagline: 'Custom software from start to finish.',
+    catchphrase: 'From architecture to deployment.',
     description: "I'm an engineer first. End-to-end ownership from architecture to deployment, with AI integrated where it genuinely earns its place.",
-    startingPrice: 2000,
     items: [
       'Web applications',
       'API development',
@@ -46,8 +46,8 @@ export const servicesData: Service[] = [
     name: 'Employee Training',
     category: 'Training',
     tagline: 'Practical training on the latest tools.',
+    catchphrase: 'Hands-on. Immediately applicable.',
     description: 'Hands-on sessions that get your team actually using AI — not just aware of it. Tailored to your tools and workflows, delivered in person or remotely.',
-    startingPrice: 500,
     items: [
       'Claude, ChatGPT, and Gemini',
       'AI in software development',
@@ -61,8 +61,8 @@ export const servicesData: Service[] = [
     name: 'Strategy Consulting',
     category: 'Consulting',
     tagline: 'Concrete plans and sparring.',
+    catchphrase: 'Clarity before action.',
     description: "Not every company needs a full transformation. Sometimes you need someone who's seen a lot to help you figure out where to start, what to prioritize, and how to move.",
-    startingPrice: 500,
     items: [
       'AI readiness assessments',
       'Technology roadmaps',

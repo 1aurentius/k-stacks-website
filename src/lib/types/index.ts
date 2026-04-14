@@ -17,9 +17,8 @@ export interface Service {
   name: string;
   category: string;
   tagline: string;
+  catchphrase: string;
   description: string;
-  isActive?: boolean;
-  startingPrice: number;
   phases?: ServicePhase[];
   items?: string[];
 }
