@@ -7,12 +7,8 @@
   let { children }: { children: Snippet } = $props();
 </script>
 
-<main class="site-main">
-  <div class="background-shapes"></div>
+<Navigation />
 
-  <Navigation />
+{@render children()}
 
-  {@render children()}
-
-  <Footer />
-</main>
+<Footer />

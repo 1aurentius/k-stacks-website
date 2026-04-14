@@ -1,44 +1,14 @@
-<section class="client-logos-section" id="client-logos-section">
-  <div class="logos-container">
-    <h4 class="logos-heading">Ventures I've supported</h4>
-    <div class="logos-grid">
-      <img
-        src="/equel_logo_black.svg"
-        loading="lazy"
-        alt="Equel Social"
-        class="client-logo"
-      />
-      <img
-        src="/systemic_logo_reports.png"
-        loading="lazy"
-        alt="Systemic"
-        class="client-logo"
-      />
-      <img
-        src="/Pictue-Logo-Dark.svg"
-        loading="lazy"
-        alt="Pictue"
-        class="client-logo"
-      />
-      <img
-        src="/Viinitie_black_1200x1200.webp"
-        loading="lazy"
-        alt="Viinitie"
-        class="client-logo"
-      />
-      <img
-        src="/Aconia_logo.svg"
-        loading="lazy"
-        alt="Aconia"
-        class="client-logo"
-      />
-      <img
-        src="/heely_logo_black_png.png"
-        loading="lazy"
-        alt="Heely"
-        class="client-logo"
-      />
+<section class="border-top">
+  <div class="section-inner">
+    <div class="section-label">Industries I've Worked With</div>
+    <div class="industry-tags">
+      <span class="industry-tag">Venture Capital &amp; Portfolio</span>
+      <span class="industry-tag">Investment &amp; Finance</span>
+      <span class="industry-tag">Event Technology</span>
+      <span class="industry-tag">Media &amp; Content</span>
+      <span class="industry-tag">Sustainability &amp; Climate</span>
+      <span class="industry-tag">Health &amp; Wellbeing</span>
+      <span class="industry-tag">Construction &amp; Real Estate</span>
     </div>
-    <p class="logos-footer-text">and many others</p>
   </div>
 </section>
