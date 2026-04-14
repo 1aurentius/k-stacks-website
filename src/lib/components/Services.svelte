@@ -1,6 +1,12 @@
 <script lang="ts">
   import ServiceItem from './ServiceItem.svelte';
   import { servicesData } from '$lib/data/servicesData';
+
+  let activeServiceId: string | null = $state(null);
+
+  function handleServiceClick(serviceId: string) {
+    activeServiceId = activeServiceId === serviceId ? null : serviceId;
+  }
 </script>
 
 <section class="services-section-marzipan" id="services-section">
@@ -17,7 +23,11 @@
   <div class="services-list-container">
     <div class="services-list" id="services-list-items">
       {#each servicesData as service (service.id)}
-        <ServiceItem {service} />
+        <ServiceItem
+          {service}
+          isActive={activeServiceId === service.id}
+          onclick={handleServiceClick}
+        />
       {/each}
     </div>
   </div>

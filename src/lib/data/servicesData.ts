@@ -12,17 +12,17 @@ export const servicesData: Service[] = [
       {
         label: 'Phase 01',
         name: 'Workflow mapping',
-        description: 'Interviews with leadership and key employees to document processes, tools, and time spent. We build a complete picture of how your organization actually works.',
+        description: 'Structured interviews with leadership and key employees across teams. We document every process — what tools are used, how long things take, where handoffs break down, and where time is wasted. The output is a complete operational map of your organization, grounded in how work actually happens rather than how it was designed to happen.',
       },
       {
         label: 'Phase 02',
         name: 'Opportunity identification',
-        description: 'A prioritized list of automation and AI opportunities with estimated time savings, implementation costs, and recommended tools for each.',
+        description: 'We analyze the operational map and identify where AI creates genuine leverage — not just what\'s technically possible, but what will actually move the needle for your business. You receive a prioritized opportunity list with estimated time savings, implementation cost ranges, suggested tools, and expected ROI for each initiative. This becomes the foundation of your AI roadmap.',
       },
       {
         label: 'Phase 03',
         name: 'Implementation',
-        description: 'Hands-on support building automations and deploying agents, enabling your team, measuring impact, and iterating based on results.',
+        description: 'Hands-on execution of the highest-priority opportunities. I build the automations, deploy the agents, and integrate the tools — then work alongside your team to ensure adoption sticks. We measure impact against the baselines established in Phase 01, iterate based on real results, and document everything so your team can maintain and extend the systems independently.',
       },
     ],
   },
