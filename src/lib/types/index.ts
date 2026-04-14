@@ -6,13 +6,22 @@ export interface NavigationLink {
 }
 
 // Service Types
+export interface ServicePhase {
+  label: string;
+  name: string;
+  description: string;
+}
+
 export interface Service {
   id: string;
   name: string;
   category: string;
+  tagline: string;
   description: string;
   isActive?: boolean;
   startingPrice: number;
+  phases?: ServicePhase[];
+  items?: string[];
 }
 
 // Testimonial Types
