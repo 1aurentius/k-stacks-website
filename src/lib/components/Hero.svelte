@@ -1,18 +1,49 @@
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-label">AI Transformation · Product Development · Consulting</div>
-    <h1>I build <span class="gradient-text">AI infrastructure</span> for companies.</h1>
-    <p class="hero-sub">
-      From data foundations to deployed agents — I help companies set up the AI systems
-      that actually transform how they work. Currently engaged full-time as AI Lead
-      at two organizations.
+<script lang="ts">
+  import { onMount } from 'svelte';
+
+  let isVisible = $state(false);
+
+  onMount(() => {
+    const timer = setTimeout(() => {
+      isVisible = true;
+    }, 100);
+
+    return () => clearTimeout(timer);
+  });
+</script>
+
+<section class="hero-section-marzipan" aria-labelledby="main-heading">
+  <div class="hero-content-container" role="region">
+    <h1 id="main-heading" class="hero-main-heading">
+      <span class="hero-heading-line">
+        {" "}Your partner for AI ventures{" "}
+      </span>
+    </h1>
+    <p class="hero-description">
+      I work with startups to build products people love and adopt AI with
+      purpose. My approach is fast, affordable, and free of unnecessary
+      complexity.
     </p>
-    <a href="#contact" class="hero-cta" onclick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-      Let's Talk
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
-    </a>
+  </div>
+  <div class="hero-banner-container">
+    <div
+      id="banner"
+      class="hero-banner-content"
+      role="region"
+      aria-label="Call to action section"
+    >
+      <div class="hero-banner-background" aria-hidden="true"></div>
+      <a
+        href="https://calendar.app.google/VSL5R4En4SjyGSfR7"
+        class="hero-banner-cta-link"
+      >
+        <button
+          class="hero-banner-cta-button"
+          aria-label="Get started with our services"
+        >
+          <p>Get started today</p>
+        </button>
+      </a>
+    </div>
   </div>
 </section>

@@ -1,80 +1,32 @@
-export interface ServiceExample {
-  text: string;
-}
-
-export interface Service {
-  id: string;
-  number: string;
-  name: string;
-  for: string;
-  description: string;
-  items: string[];
-  examples: ServiceExample[];
-}
+import type { Service } from '$lib/types/index'
 
 export const servicesData: Service[] = [
   {
-    id: 'ai-transformation',
-    number: '01',
-    name: 'AI Transformation',
-    for: 'For companies ready to go from pilots to production.',
-    description:
-      'I build the AI infrastructure that lets you deploy dozens of agents across your organization. Context engineering is at the core — every system I build starts with making sure your AI actually understands your business.',
-    items: [
-      'Auditing and restructuring your existing data for AI consumption',
-      'Setting up databases and pipelines that agents can work with',
-      'Deploying multi-agent architectures tailored to your workflows',
-      'Enriching your data to unlock capabilities you didn\'t know you had',
-      'Training your team on AI best practices — from prompting to process design',
-      'Building governance frameworks so you can scale with confidence',
-    ],
-    examples: [
-      {
-        text: 'For a Nordic venture builder, I set up the full AI infrastructure across their organization — data foundations, agent deployment pipelines, and team enablement — positioning them to scale AI operations across their portfolio companies.',
-      },
-    ],
+    id: 'workshops',
+    name: 'AI Strategy Workshops',
+    category: 'Artificial Intelligence',
+    description: 'A deep dive that transforms your AI ambitions into a concrete plan. Grounded in presence, my role is to hold the common thread as we explore the AI landscape, identify your key challenges, and pinpoint the AI solutions that will deliver the highest return on investment. You will walk away with a prioritized list of AI initiatives, a clear business case for each, and an actionable roadmap for implementation.',
+    startingPrice: 500,
   },
   {
-    id: 'product-development',
-    number: '02',
-    name: 'Product Development',
-    for: 'For companies building AI-powered products.',
-    description:
-      "I'm an agentic engineer with a Bachelor's in Computer Science. I don't just consult — I build. The reason to work with me is presence: I'm in the codebase, in the room with your customers, and deeply invested in solving the right problems. For larger projects, I bring in a close-knit network of exceptional product and engineering talent.",
-    items: [
-      'Full-stack product development with AI at the core',
-      'Architecture design and backend engineering',
-      'AI-powered features: search, matching, content generation, automation',
-      'Rapid prototyping and MVP development',
-      'Product strategy rooted in customer conversations',
-    ],
-    examples: [
-      {
-        text: 'I architected a capital intelligence platform for an energy transition investment firm — investor profiling, AI-driven deal matching, gated member access, and automated communications.',
-      },
-      {
-        text: 'For an event technology company, I\'m leading product development that includes backend architecture migration, simulation tools for resource planning, and AI-powered operations monitoring.',
-      },
-    ],
+    id: 'ai-agents-automation',
+    name: 'AI Agents + Automation',
+    category: 'AI Agents + Automation',
+    description: 'Business process automation and workflow optimization. I help you design and implement automated systems and internal tools that streamline operations, reduce manual work, and improve efficiency. The tech stack is determined as best seen fit for the project. This includes, but is not limited to, Python, JavaScript, React, Node.js, n8n, make.com and more.',
+    startingPrice: 2000,
   },
   {
-    id: 'ai-consulting',
-    number: '03',
-    name: 'AI Consulting',
-    for: 'For companies getting serious about AI.',
-    description:
-      "Not every company needs a full transformation. Sometimes you need someone who's been in the trenches to help you figure out where to start, what's real, and how to build internal capabilities.",
-    items: [
-      '1-on-1 executive and founder mentoring on AI strategy and tools',
-      'Company-wide workshops on AI best practices and workflows',
-      'In-house development of AI processes and lightweight agents',
-      'AI readiness assessments and roadmapping',
-      'Ongoing advisory and sparring',
-    ],
-    examples: [
-      {
-        text: "I work with founders and executives 1-on-1, helping them go from \"I know AI is important\" to actually using it to multiply their output — from building their first agents to rethinking how their teams work.",
-      },
-    ],
+    id: 'mvp-product-development',
+    name: 'MVP & Product',
+    category: 'Product Development',
+    description: "Together, we'll transform your vision into a Minimum Viable Product with high conviction. My process cuts through the noise to focus on the essential features that deliver immediate value and validate your idea with clarity and speed.",
+    startingPrice: 5000,
   },
-];
+  {
+    id: 'custom',
+    name: 'Consultation',
+    category: 'Consultation',
+    description: "When your challenge requires a unique approach, a deep conversation is where we begin. I apply my full experience as a product-minded developer to engineer a solution tailored to your specific needs—from custom AI agents to MVP development. We'll work from first principles to build a solution that moves your business forward.",
+    startingPrice: 0,
+  },
+]
