@@ -1,14 +1,13 @@
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-label">AI Transformation · Product Development · Consulting</div>
-    <h1>I build <span class="gradient-text">AI infrastructure</span> for companies.</h1>
+    <h1>I help founders build with AI — without the noise.</h1>
     <p class="hero-sub">
-      From data foundations to deployed agents — I help companies set up the AI systems
-      that actually transform how they work. Currently engaged full-time as AI Lead
-      at two organizations.
+      I work with early-stage founders and growing teams in Finland and Europe — helping them
+      identify where AI creates real leverage, then building it. No bloated retainers, no generic
+      playbooks.
     </p>
-    <a href="#contact" class="hero-cta" onclick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-      Let's Talk
+    <a href="https://calendar.app.google/VSL5R4En4SjyGSfR7" target="_blank" rel="noopener" class="hero-cta">
+      Book a discovery call
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>

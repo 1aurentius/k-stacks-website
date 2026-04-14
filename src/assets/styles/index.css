@@ -598,6 +598,59 @@ section.border-top {
   color: var(--text);
 }
 
+.footer-cta {
+  display: inline-block;
+  margin: 1.5rem auto 0;
+  background: var(--text);
+  color: #fff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.footer-cta:hover {
+  background: var(--accent);
+}
+
+.about-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+
+.about-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.about-links a {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.about-links a:hover {
+  color: var(--accent-hover);
+}
+
 /* ===== FOOTER ===== */
 footer {
   border-top: 1px solid var(--border);
