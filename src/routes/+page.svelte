@@ -6,6 +6,6 @@
 </script>
 
 <Hero />
-<Services />
 <ClientLogos />
+<Services />
 <About />
