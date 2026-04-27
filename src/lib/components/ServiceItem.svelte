@@ -77,7 +77,8 @@
 
   .service-phases {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 0.5rem;
   }
@@ -90,6 +91,14 @@
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     background: #ffffff;
+    flex: 1 1 240px;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .service-phases {
+      flex-direction: column;
+    }
   }
 
   .service-phase-header {

@@ -753,7 +753,7 @@ main.site-main {
 }
 
 .service-item.active .service-description {
-  max-height: 400px;
+  max-height: 2000px;
   padding: 1rem;
   margin: 0;
   opacity: 1;
