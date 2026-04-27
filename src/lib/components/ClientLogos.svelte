@@ -38,6 +38,30 @@
         alt="Heely"
         class="client-logo"
       />
+      <img
+        src="/coventures_logo.svg"
+        loading="lazy"
+        alt="Coventures"
+        class="client-logo"
+      />
+      <img
+        src="/usva-energia-logo.webp"
+        loading="lazy"
+        alt="Usva Energia"
+        class="client-logo"
+      />
+      <img
+        src="/the-nooa-company-logo.webp"
+        loading="lazy"
+        alt="The Nooa Company"
+        class="client-logo"
+      />
+      <img
+        src="/bangeri_logo.svg"
+        loading="lazy"
+        alt="Bängeri"
+        class="client-logo"
+      />
     </div>
     <p class="logos-footer-text">and many others</p>
   </div>
