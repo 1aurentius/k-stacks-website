@@ -10,6 +10,10 @@
 		"html_handling": "auto-trailing-slash",
 		"not_found_handling": "none"
 	},
+	"routes": [
+		{ "pattern": "krister.work", "custom_domain": true },
+		{ "pattern": "www.krister.work", "custom_domain": true }
+	],
 	"workers_dev": true,
 	"preview_urls": false
 }
