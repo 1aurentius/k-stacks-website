@@ -9,7 +9,7 @@ Personal website for Krister Alasaarela — custom software solutions for startu
 - **Build Tool**: Vite
 - **Adapter**: `@sveltejs/adapter-static` (prerendered static site)
 - **Styling**: Custom CSS
-- **Deployment**: Render.com Static Site
+- **Deployment**: Cloudflare Workers (static assets)
 
 ## Project Structure
 
@@ -23,7 +23,7 @@ Personal website for Krister Alasaarela — custom software solutions for startu
 │   ├── routes/           # SvelteKit routes (+page, +layout, /privacy, /terms)
 │   ├── assets/styles/    # Global stylesheets
 │   └── app.html          # HTML template
-├── static/               # Static assets (images, favicon, robots.txt, sitemap.xml, _redirects)
+├── static/               # Static assets (images, favicon, robots.txt, sitemap.xml)
 ├── svelte.config.js      # Static adapter config (outputs to dist/)
 ├── vite.config.ts
 └── tsconfig.json
@@ -53,15 +53,17 @@ Vite's dev server starts at `http://localhost:5173` by default.
 - `npm run check` — run `svelte-check` with the TS config
 - `npm run check:watch` — same, in watch mode
 
-## Deployment (Render.com)
+## Deployment (Cloudflare Workers)
 
-Deployed as a static site on Render.
+The site is a Cloudflare Worker (`krister-website`) that serves the prerendered build from `dist/` as static assets (`wrangler.jsonc`).
+`worker/index.js` 301-redirects `krister.work` and plain `http://` to `https://www.krister.work`.
 
-- **Build Command**: `npm run build`
-- **Publish Directory**: `dist`
-- **Node Version**: 18+
+```bash
+npm run build
+npx wrangler deploy
+```
 
-The static adapter outputs to `dist/` with a `200.html` fallback for client-side routing. `static/_redirects` is copied into the build for Render's routing.
+Custom domains `krister.work` and `www.krister.work` are attached to the Worker; DNS for `krister.work` is on Cloudflare.
 
 ## Content
 
