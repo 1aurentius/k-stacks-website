@@ -14,7 +14,7 @@ export const testimonialsData: Testimonial[] = [
     name: "Marcus Johnson",
     company: "Digital Dynamics",
     role: "CTO",
-    content: "Working with Marzipan was a game-changer. Krister's expertise in conversational agents helped us create a customer service system that our clients absolutely love.",
+    content: "Working with K & Stacks was a game-changer. Krister's expertise in conversational agents helped us create a customer service system that our clients absolutely love.",
     rating: 5,
   },
   {

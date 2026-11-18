@@ -11,7 +11,7 @@
     <div class="testimonials-header">
       <h2 class="testimonials-heading">
         Love letters <br />
-        to Marzipan
+        to K & Stacks
       </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
